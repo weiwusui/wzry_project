@@ -10,6 +10,16 @@
             <el-menu-item index="/categories/creat">新建分类</el-menu-item>
             <el-menu-item index="/categories/list">分类列表</el-menu-item>
           </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">物品</template>
+            <el-menu-item index="/items/creat">新建物品</el-menu-item>
+            <el-menu-item index="/items/list">物品列表</el-menu-item>
+          </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">英雄</template>
+            <el-menu-item index="/heros/creat">新建英雄</el-menu-item>
+            <el-menu-item index="/heros/list">英雄列表</el-menu-item>
+          </el-menu-item-group>
           
         </el-submenu>
       </el-menu>
