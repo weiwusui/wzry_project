@@ -19,5 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.14",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "require-all": "^3.0.0"
   }
 }

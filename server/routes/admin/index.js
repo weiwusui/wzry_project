@@ -6,7 +6,7 @@ module.exports = app => {
     const router = express.Router({
       mergeParams:true//允许子集路由访问父级的参数
     })
-    // const Category = require('../../models/Categoty')
+    // const Category = require('../../models/Category')
     //创建资源
     router.post('/',  async (req,res) => {
       const model = await req.Model.create(req.body)
@@ -32,7 +32,7 @@ module.exports = app => {
       if (req.Model.modelName ==='Category'){
         queryOptions.populate = 'parent'
       }
-      const  items = await req.Model.find().setOptions(queryOptions).limit(10) 
+      const  items = await req.Model.find().setOptions(queryOptions).limit(100) 
       // const  items = await req.Model.find().populate('parent').limit(10) 
       res.send(items)
     })
