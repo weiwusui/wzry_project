@@ -56,16 +56,16 @@ const routes = [
         component:ItemList
       },
       {
-        path:'/heros/creat',
+        path:'/heroes/creat',
         component:HeroEdit
       },
       {
-        path:'/heros/edit/:id',
+        path:'/heroes/edit/:id',
         component:HeroEdit,
         props:true
       },
       {
-        path:'/heros/list',
+        path:'/heroes/list',
         component:HeroList
       },
       {

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainA from '../views/MainA.vue'
 import HomeView from '../views/HomeView.vue'
+import ArticleView from '../views/ArticleView.vue'
 
 Vue.use(VueRouter)
 
@@ -10,7 +11,8 @@ const routes = [
     path: '/',
     component: MainA,
     children:[
-      {path:'/',name:'homeview',component:HomeView}
+      {path:'/',name:'homeview',component:HomeView},
+      {path:'/articles/:id',name:'articleview',component:ArticleView,props:true}
     ]
   },
   {

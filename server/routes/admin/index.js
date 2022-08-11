@@ -32,7 +32,7 @@ module.exports = app => {
       if (req.Model.modelName ==='Category'){
         queryOptions.populate = 'parent'
       }
-      const  items = await req.Model.find().setOptions(queryOptions).limit(100) 
+      const  items = await req.Model.find().setOptions(queryOptions).limit(1000) //获取数据条数上限
       // const  items = await req.Model.find().populate('parent').limit(10) 
       res.send(items)
     })

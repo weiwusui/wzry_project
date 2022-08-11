@@ -17,6 +17,7 @@
       class="avatar-uploader"
       :action="$http.defaults.baseURL+'/upload'"
       :show-file-list="false"
+      :headers="getAuthHeaders()"
       :on-success="afterUpload"
       >
       <img v-if="model.avatar" :src="model.avatar" class="avatar">
@@ -70,6 +71,7 @@
           <el-upload
           class="avatar-uploader"
           :action="$http.defaults.baseURL+'/upload'"
+          :headers="getAuthHeaders()"
           :show-file-list="false"
           :on-success="res => $set(item,'icon',res.url)"
           >
@@ -122,19 +124,19 @@
       },
       async save(){
         let res
-        if (this.id){res = await this.$http.put(`rest/heros/${this.id}`,this.model)}
+        if (this.id){res = await this.$http.put(`rest/heroes/${this.id}`,this.model)}
         else{
-          res = await this.$http.post('rest/heros',this.model)
+          res = await this.$http.post('rest/heroes',this.model)
         }
         
-        this.$router.push('/heros/list')
+        this.$router.push('/heroes/list')
         this.$message({
           type:'success',
           message:'保存成功'
         })
       },
       async fetch(){
-        const res = await this.$http.get(`rest/heros/${this.id}`)
+        const res = await this.$http.get(`rest/heroes/${this.id}`)
         // this.model = res.data
         this.model = Object.assign({},this.model,res.data)
       },
