@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const Category = require('../../models/Category')
 const Article = require('../../models/Article')
 const Hero = require('../../models/Hero')
+const Item = require('../../models/Item')
 
 //导入新闻数据
 module.exports = app=>{
@@ -140,6 +141,11 @@ module.exports = app=>{
             data.related = await Article.find().where({
                 categories:{$in: data.categories}
             }).limit(2)
+            res.send(data)
+        })
+
+        router.get('/heroes/:id',async (req,res) => {
+            const data = await Hero.findById(req.params.id).populate('categories items1 items2 partners.hero').lean()
             res.send(data)
         })
     app.use('/web/api',router)

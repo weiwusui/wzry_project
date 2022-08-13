@@ -18,7 +18,8 @@ body{
 }
 
 a{
-    color:#999
+    color:#999;
+    text-decoration:none;
 }
 p{
     line-height: 1.5rem;
@@ -137,6 +138,17 @@ p{
     border-radius:.1538rem;
     font-size:map-get($font-sizes, 'sm') * $base-font-size;
     padding:0.2rem 0.6rem
+}
+.btn-lg{
+    i{
+        color:map-get($colors,'primary');
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    background: map-get($colors,'white-1');
+    border: 1px solid map-get($colors,'white-2');
+    padding:0.8rem 3rem;
+    font-size:1rem
 }
 
 //nav
