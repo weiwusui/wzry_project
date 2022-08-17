@@ -20,6 +20,15 @@
             <el-menu-item index="/articles/creat">新建文章</el-menu-item>
             <el-menu-item index="/articles/list">文章列表</el-menu-item>
           </el-menu-item-group>
+          <el-menu-item-group>
+            <template slot="title">视频</template>
+            <el-menu-item index="/videos/creat">新建视频</el-menu-item>
+            <el-menu-item index="/videos/list">视频列表</el-menu-item>
+            <!-- <el-menu-item index="/hotvideos/creat">新建热门视频</el-menu-item>
+            <el-menu-item index="/hotvideos/list">热门视频</el-menu-item> -->
+            <el-menu-item index="/v/creat">新建热门视频</el-menu-item>
+            <el-menu-item index="/v/list">热门视频</el-menu-item>
+          </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
           <template slot="title"><i class="el-icon-message"></i>运营管理</template>

@@ -29,7 +29,6 @@
       font-size: 22px;
       color: #fff;
       background: linear-gradient(-45deg, #3967FF, #B500FE);
-      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -66,6 +65,12 @@
               </li>
           
             <li class="dib">
+              <span class="icon iconfont">&#xe66f;</span>
+                <div class="name">视频</div>
+                <div class="code-name">&amp;#xe66f;</div>
+              </li>
+          
+            <li class="dib">
               <span class="icon iconfont">&#xe69d;</span>
                 <div class="name">23-superhero</div>
                 <div class="code-name">&amp;#xe69d;</div>
@@ -95,7 +100,7 @@
 <pre><code class="language-css"
 >@font-face {
   font-family: 'iconfont';
-  src: url('iconfont.ttf?t=1660227411626') format('truetype');
+  src: url('iconfont.ttf?t=1660635262579') format('truetype');
 }
 </code></pre>
           <h3 id="-iconfont-">第二步：定义使用 iconfont 的样式</h3>
@@ -136,6 +141,15 @@
               menu
             </div>
             <div class="code-name">.icon-menu
+            </div>
+          </li>
+          
+          <li class="dib">
+            <span class="icon iconfont icon-shipin"></span>
+            <div class="name">
+              视频
+            </div>
+            <div class="code-name">.icon-shipin
             </div>
           </li>
           
@@ -198,6 +212,14 @@
                 </svg>
                 <div class="name">menu</div>
                 <div class="code-name">#icon-menu</div>
+            </li>
+          
+            <li class="dib">
+                <svg class="icon svg-icon" aria-hidden="true">
+                  <use xlink:href="#icon-shipin"></use>
+                </svg>
+                <div class="name">视频</div>
+                <div class="code-name">#icon-shipin</div>
             </li>
           
             <li class="dib">

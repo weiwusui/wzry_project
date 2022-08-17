@@ -1,5 +1,6 @@
 <template>
     <m-card :icon="icon" :title="title">
+        <slot name="swiper"></slot>
         <div class="nav jc-between">
             <div class="nav-item" :class="{ active:active === i }"
             v-for="(category,i) in categories" :key="i"
@@ -26,7 +27,7 @@ export default {
     },
     data() {
         return {
-            active:0
+            active : 0
         }
     },
     activated() {

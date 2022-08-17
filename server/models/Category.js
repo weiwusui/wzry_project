@@ -19,4 +19,28 @@ schema.virtual('newsList',{
     
 })
 
+schema.virtual('videosList',{
+    localField:'_id',
+    ref:'Video',
+    foreignField:'categories',
+    justOne:false,
+    
+})
+
+schema.virtual('hotvideosList',{
+    localField:'_id',
+    ref:'HotVideo',
+    foreignField:'categories',
+    justOne:false,
+    
+})
+
+schema.virtual('vList',{
+    localField:'_id',
+    ref:'V',
+    foreignField:'categories',
+    justOne:false,
+    
+})
+
 module.exports = mongoose.model('Category',schema)

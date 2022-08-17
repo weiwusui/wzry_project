@@ -1,7 +1,7 @@
 <template>
   <div class="page-article">
     <div class="d-flex py-3 px-2 border-bottom">
-      <div class="iconfont icon-back text-blue"></div>
+      <div class="iconfont icon-back text-blue" @click="gb()"></div>
       <strong class="flex-1 text-blue pl-2 text-ellipsis">{{model.title}}</strong>
       <div class="text-grey fs-xs">
         2022-08-11
@@ -35,6 +35,9 @@ export default{
     }
   },
   methods:{
+    gb(){
+      this.$router.go(-1);
+    },
     async fetch(){
       const res= await this.$http.get(`articles/${this.id}`)
       this.model = res.data

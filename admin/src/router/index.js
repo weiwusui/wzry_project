@@ -20,6 +20,13 @@ import AdList from '../views/AdList.vue'
 import AdminUserEdit from '../views/AdminUserEdit.vue'
 import AdminUserList from '../views/AdminUserList.vue'
 
+import VideoEdit from '../views/VideoEdit.vue'
+import VideoList from '../views/VideoList.vue'
+import HotVideoEdit from '../views/HotVideoEdit.vue'
+import HotVideoList from '../views/HotVideoList.vue'
+import VEdit from '../views/VEdit.vue'
+import VList from '../views/VList.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -106,7 +113,46 @@ const routes = [
       {
         path:'/admin_users/list',
         component:AdminUserList
-      }
+      },
+      {
+        path:'/videos/creat',
+        component:VideoEdit
+      },
+      {
+        path:'/videos/edit/:id',
+        component:VideoEdit,
+        props:true
+      },
+      {
+        path:'/videos/list',
+        component:VideoList
+      },
+      // {
+      //   path:'/hotvideos/creat',
+      //   component:HotVideoEdit
+      // },
+      // {
+      //   path:'/hotvideos/edit/:id',
+      //   component:HotVideoEdit,
+      //   props:true
+      // },
+      // {
+      //   path:'/hotvideos/list',
+      //   component:HotVideoList
+      // },
+      {
+        path:'/v/creat',
+        component:VEdit
+      },
+      {
+        path:'/v/edit/:id',
+        component:VEdit,
+        props:true
+      },
+      {
+        path:'/v/list',
+        component:VList
+      },
     ]
   },
 ]
