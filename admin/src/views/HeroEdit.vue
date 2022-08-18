@@ -184,7 +184,6 @@ export default {
       const res = await this.$http.get(`rest/heroes`)
       this.heroes = res.data
     },
-
   },
   created() {
     this.fetchCategories()
