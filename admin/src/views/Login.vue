@@ -23,7 +23,7 @@
 export default {
    data() {
       return {
-        model:{}
+        model:{username:'admin',password:'666666'}
       }
    },
    activated() {

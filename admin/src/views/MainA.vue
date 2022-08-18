@@ -56,15 +56,15 @@
     
     <el-container>
       <el-header style="text-align: right; font-size: 12px">
+        <span>admin</span>
         <el-dropdown>
-          <i class="el-icon-setting" style="margin-right: 15px"></i>
+          <i class="el-icon-arrow-down" style="margin-right: 15px"></i>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>查看</el-dropdown-item>
-            <el-dropdown-item>新增</el-dropdown-item>
-            <el-dropdown-item>删除</el-dropdown-item>
+            <el-dropdown-item @click.native="goToWeb">前台</el-dropdown-item>
+            <el-dropdown-item @click.native="exit">退出</el-dropdown-item>
+            <el-dropdown-item @click.native="goToGithub">GitHub</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>王小虎</span>
       </el-header>
       
       <el-main>
@@ -101,6 +101,22 @@
       return {
         tableData: Array(20).fill(item)
       }
+    },
+    methods:{
+      exit() {
+            localStorage.removeItem('token');
+            this.$message({
+                type: 'success',
+                message: '退出成功'
+            });
+            this.$router.push('/login');
+        },
+        goToWeb() {
+            window.open(location.origin +'/web');
+        },
+        goToGithub() {
+            window.open('https://github.com/weiwusui/wzry_project');
+        },
     }
   };
 </script>
