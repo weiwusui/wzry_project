@@ -23,7 +23,6 @@
   export default{
     props:{
       id:{
-
       }
     },
     data(){
@@ -41,7 +40,6 @@
         else{
           res = await this.$http.post('rest/categories',this.model)
         }
-        
         this.$router.push('/categories/list')
         this.$message({
           type:'success',
