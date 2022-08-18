@@ -39,7 +39,6 @@ import { VueEditor } from "vue2-editor";
 export default {
   props: {
     id: {
-
     }
   },
   components: {
@@ -48,7 +47,6 @@ export default {
   data() {
     return {
       model: {
-
       },
       categories: []
     }
@@ -60,7 +58,6 @@ export default {
       else {
         res = await this.$http.post('rest/videos', this.model)
       }
-
       this.$router.push('/videos/list')
       this.$message({
         type: 'success',
