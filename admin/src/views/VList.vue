@@ -46,10 +46,6 @@ export default{
   created(){
     this.fetch()
   }
-
-
-
-
 }
 
 </script>
