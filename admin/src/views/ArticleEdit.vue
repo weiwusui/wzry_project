@@ -24,13 +24,11 @@
   </div>
 </template>
 <script>
-  import http from "@/http";
+import http from "@/http";
 import { VueEditor } from "vue2-editor";
-
   export default{
     props:{
       id:{
-
       }
     },
     components: {
@@ -46,13 +44,11 @@ import { VueEditor } from "vue2-editor";
     },
     methods:{
       async handleImageAdded(file, Editor, cursorLocation, resetUploader) {
-
       const formData = new FormData();
       formData.append("file", file);
       const res = await this.$http.post('upload',formData)
       Editor.insertEmbed(cursorLocation, "image", res.data.url);
       resetUploader();
-      
     },
       async save(){
         let res
@@ -60,7 +56,6 @@ import { VueEditor } from "vue2-editor";
         else{
           res = await this.$http.post('rest/articles',this.model)
         }
-        
         this.$router.push('/articles/list')
         this.$message({
           type:'success',
