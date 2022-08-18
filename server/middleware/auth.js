@@ -11,6 +11,7 @@ module.exports = option =>  {
     assert(id,401,'请先登录')
     req.user = await AdminUser.findById(id)
     // console.log(tokenData)
+    
     // console.log(req.user)
     assert(req.user,401,'请先登录')
     await next()
