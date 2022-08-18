@@ -34,5 +34,4 @@ const schema = new mongoose.Schema({
         description:{type:String}
     }]
 })
-
 module.exports = mongoose.model('Hero',schema,'heroes')

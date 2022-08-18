@@ -4,5 +4,4 @@ const schema = new mongoose.Schema({
     icon:{type:String},
     parent:{}
 })
-
 module.exports = mongoose.model('Item',schema)

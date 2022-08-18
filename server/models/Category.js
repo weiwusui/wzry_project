@@ -4,6 +4,7 @@ const schema = new mongoose.Schema({
     parent:{type:mongoose.SchemaTypes.ObjectId,ref:'Category'}
 })
 
+
 schema.virtual('children',{
     localField:'_id',
     foreignField:'parent',
