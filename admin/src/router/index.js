@@ -22,8 +22,7 @@ import AdminUserList from '../views/AdminUserList.vue'
 
 import VideoEdit from '../views/VideoEdit.vue'
 import VideoList from '../views/VideoList.vue'
-import HotVideoEdit from '../views/HotVideoEdit.vue'
-import HotVideoList from '../views/HotVideoList.vue'
+
 import VEdit from '../views/VEdit.vue'
 import VList from '../views/VList.vue'
 
@@ -127,19 +126,6 @@ const routes = [
         path:'/videos/list',
         component:VideoList
       },
-      // {
-      //   path:'/hotvideos/creat',
-      //   component:HotVideoEdit
-      // },
-      // {
-      //   path:'/hotvideos/edit/:id',
-      //   component:HotVideoEdit,
-      //   props:true
-      // },
-      // {
-      //   path:'/hotvideos/list',
-      //   component:HotVideoList
-      // },
       {
         path:'/v/creat',
         component:VEdit
@@ -161,7 +147,6 @@ const router = new VueRouter({
   routes
 })
 router.beforeEach((to,from,next) =>{
-  // console.log(to.meta)
   if(!to.meta.isPublic && !localStorage.token){
     return next('/login')
   }
