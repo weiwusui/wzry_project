@@ -35,7 +35,6 @@
 <script>
 import http from "@/http";
 import { VueEditor } from "vue2-editor";
-
 export default {
   props: {
     id: {
@@ -48,7 +47,6 @@ export default {
   data() {
     return {
       model: {
-
       },
       categories: []
     }
