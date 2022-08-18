@@ -53,7 +53,6 @@
         </el-submenu>
       </el-menu>
     </el-aside>
-    
     <el-container>
       <el-header style="text-align: right; font-size: 12px">
         <span>admin</span>
@@ -66,30 +65,23 @@
           </el-dropdown-menu>
         </el-dropdown>
       </el-header>
-      
       <el-main>
         <router-view :key="$router.path"></router-view>
-        
       </el-main>
     </el-container>
   </el-container>
-  
 </div>
-
 </template>
-
 <style>
   .el-header {
     background-color: #B3C0D1;
     color: #333;
     line-height: 60px;
   }
-  
   .el-aside {
     color: #333;
   }
 </style>
-
 <script>
   export default {
     data() {
