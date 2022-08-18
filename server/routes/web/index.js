@@ -108,7 +108,7 @@ module.exports = app => {
             if (cat.name === '热门') {
                 continue//跳过热门
             }
-            //当前分类再数据库中对应的数据
+            //当前分类在数据库中对应的数据
             const category = await Category.findOne({
                 name: cat.name
             })
