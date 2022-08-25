@@ -133,7 +133,7 @@ module.exports = app => {
                 $lookup: {//join//外链接
                     from: 'heroes',//关联的mongoose的表，集合名
                     foreignField: 'categories',
-                    localField: 'name',
+                    localField: '_id',
                     as: 'heroList'
                 }
             },

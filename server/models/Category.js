@@ -20,6 +20,14 @@ schema.virtual('newsList',{
     
 })
 
+schema.virtual('heroList',{
+    localField:'_id',
+    ref:'Hero',
+    foreignField:'categories',
+    justOne:false,
+    
+})
+
 schema.virtual('videosList',{
     localField:'_id',
     ref:'Video',
